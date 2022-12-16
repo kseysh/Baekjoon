@@ -8,5 +8,4 @@ for i in range(num):
 		floor=n//h
 		count=h
 	print(str(count)+str(floor).zfill(2))
-	
-# 다른 방식으로도 해보기
+
