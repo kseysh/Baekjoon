@@ -8,4 +8,4 @@ for j in range(num):
 		count=h
 	print(str(count)+str(floor).zfill(2))
 
-#다른방식으로도 해보기 
+#다른방식으로도 해보기
