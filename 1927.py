@@ -1,17 +1,16 @@
+from heapq import heappop, heappush
 import sys
-from collections import deque
-queue = deque()
-result = deque()
-for i in range(int(sys.stdin.readline().rstrip())):
+min_heap = []
+result = []
+
+for i in range(int(input())):
     inputNumber = int(sys.stdin.readline().rstrip())
     if inputNumber == 0:
-        if len(queue) == 0:
+        if len(min_heap) == 0:
             result.append(0)
         else:
-            minIndex = queue.index(min(queue))
-            result.append(queue[minIndex])
-            del queue[minIndex]
+            result.append(heappop(min_heap))
     else:
-        queue.append(inputNumber)
+        heappush(min_heap,inputNumber)
 for i in result:
     print(i)
